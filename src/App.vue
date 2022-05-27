@@ -1,13 +1,13 @@
 <template>
   <container app-container="true">
     <main contains-main-content="true">
-jh
+      <UserHi />
     </main>
   </container>
 </template>
 
 <script setup lang="ts">
-
+  import UserHi from "./components/UserHi.vue";
 </script>
 
 <style>
@@ -18,15 +18,16 @@ jh
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(hsl(147, 93%, 59%), hsl(0, 0%, 28%));
+    background: var(--background-container-color);
     width: 100%;
     height: 100%;
   }
   main[contains-main-content="true"] {
-    background: white;
+    background: var(--main-content-coloring);
     width: var(--main-content-sizing);
     height: var(--main-content-sizing);
+    border-radius: 12px;
+    padding: 3%;
   }
 
-  
 </style>
