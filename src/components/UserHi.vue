@@ -1,6 +1,5 @@
 <template>
   <h1 user-hello="true">Hi there [UserName]</h1>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
 </template>
 <style>
   h1[user-hello="true"] {
@@ -15,9 +14,8 @@
   @keyframes fade-in {
     100% {
       color: rgb(212, 255, 225);
-      margin: 3%;
-      font-size: 3.1rem;
+      margin: 2%;
+      font-size: 3.1em;
     }
   }
-
 </style>
