@@ -1,5 +1,6 @@
 <template>
-  <h1 user-hello="true">Hi there [UserName]</h1>
+  <h1 user-hello="true">Hi there {{ UserName }}</h1>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
 </template>
 <style>
   h1[user-hello="true"] {
@@ -20,6 +21,18 @@
   }
 </style>
 
-<script>
-
+<script lang="ts">
+  localStorage.username = ["John Doe"];
+  export default {
+    data() {
+      return {
+        UserName: null
+      }
+    }
+  }
+  fetch("https://classroom.googleapis.com/v1/courses", {})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
 </script>
