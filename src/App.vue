@@ -1,33 +1,34 @@
 <template>
   <container app-container="true">
     <main contains-main-content="true">
-      <UserHi />
+      <GoogleSignIn />
     </main>
   </container>
 </template>
 
 <script setup lang="ts">
-  import UserHi from "./components/UserHi.vue";
+import UserHi from "./components/UserHi.vue";
+import GoogleSignIn from "./components/GoogleSignIn.vue";
 </script>
 
-<style>
-  @import "./css/variables.css";
-  @import "./css/basic.css";
+<style lang="scss">
+@import "./sass/variables.scss";
+@import "./sass/basic.scss";
 
-  container[app-container="true"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--background-container-color);
-    width: 100%;
-    height: 100%;
-  }
-  main[contains-main-content="true"] {
-    background: var(--main-content-coloring);
-    width: var(--main-content-sizing);
-    height: var(--main-content-sizing);
-    border-radius: 12px;
-    padding: 3%;
-  }
+container[app-container="true"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background-container-color;
+  width: 100%;
+  height: 100%;
+}
 
+main[contains-main-content="true"] {
+  background: $main-content-coloring;
+  width: $main-content-sizing;
+  height: $main-content-sizing;
+  border-radius: 12px;
+  padding: 3%;
+}
 </style>

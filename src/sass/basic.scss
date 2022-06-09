@@ -1,0 +1,20 @@
+@import "variables.scss";
+
+*, *::after, *::before {
+  box-sizing: border-box !important;
+  font-family: $default-font-family;
+  color: $default-font-color;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: $window-max-width-limit;
+  max-height: $window-max-height-limit;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}

@@ -1,9 +1,0 @@
-/* variables for App.vue */
-:root {
-  --main-content-sizing: 95%;
-  --window-max-width-limit: none;
-  --window-max-height-limit: none;
-
-  --background-container-color: linear-gradient(hsl(147, 93%, 59%), hsl(0, 0%, 28%));
-  --main-content-coloring: rgba(21, 21, 21, 0.61);
-}
