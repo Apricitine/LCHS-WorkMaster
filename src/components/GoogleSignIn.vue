@@ -6,7 +6,7 @@
 </template>
 <style lang="scss">
 @import "../sass/variables.scss";
-@import "../sass/basic.scss";
+@import "../sass/base.scss";
 
 .g-signin2 {
   background-color: rgb(255, 255, 255);
@@ -25,24 +25,13 @@ h1 {
   font-size: 3rem;
   text-align: center;
 }
-.abcRioButtonContentWrapper {
-  background-color: rgb(255, 255, 255);
-  width: 42%;
-  height: 60%;
-  border-radius: 140px 40px 120px 50px / 100px 60px 70px 30px; 
-}
 </style>
-<script lang="ts">
+<script lang="ts" defer>
 export default {
   data() {
+    return {
 
-  }
-}
-function onSignIn(googleUser:any):void {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId());
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
+    };
+  },
 }
 </script>

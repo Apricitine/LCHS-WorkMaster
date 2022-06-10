@@ -17,7 +17,9 @@
     },
     "moduleResolution": "node"
   },
-
+  "isCustomElement": {
+    "container": true
+  },
   "references": [
     {
       "path": "./tsconfig.vite-config.json"

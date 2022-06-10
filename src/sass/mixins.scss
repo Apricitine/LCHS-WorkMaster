@@ -1,0 +1,15 @@
+@mixin animation-slide-from-top($duration, $margin-change, $final-color, $initial-font-size, $final-font-size) {
+  color: hsla(0, 0%, 100%, 0);
+  margin: 0%;
+  text-align: center;
+  animation: fade-in $duration forwards;
+  font-size: $initial-font-size;
+
+  @keyframes fade-in {
+    100% {
+      color: $final-color;
+      margin: 0 + $margin-change;
+      font-size: $final-font-size;
+    }
+  }
+}

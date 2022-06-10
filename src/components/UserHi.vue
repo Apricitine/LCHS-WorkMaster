@@ -3,26 +3,21 @@
 </template>
 <style lang="scss">
 @import "../sass/variables.scss";
+@import "../sass/base.scss";
+@import "../sass/mixins.scss";
 
 h1[user-hello="true"] {
-  font-size: $welcome-initial-font-size;
-  margin: 0%;
-  text-align: center;
-  font-family: $default-font-family;
-  color: $welcome-animation-initial-color;
-  animation: fade-in 1s forwards;
-}
-
-@keyframes fade-in {
-  100% {
-    color: $welcome-animation-final-color;
-    margin: 0% + $welcome-animation-margin-delta;
-    font-size: $welcome-final-font-size;
-  }
+  @include animation-slide-from-top(
+    1s, 
+    $welcome-animation-margin-delta, 
+    $welcome-animation-final-color, 
+    $welcome-initial-font-size,
+    $welcome-final-font-size
+  );
 }
 </style>
 
-<script lang="ts">
+<script lang="ts" defer>
 export default {
   data() {
     return {
@@ -35,10 +30,10 @@ let fetchedUsername = fetch("https://classroom.googleapis.com/v1/courses", {})
   .then(response => response.json())
   .then(data => {
     console.log(data);
-});
-let randomWelcomeCreator = ():string => {
-  const psuedoRandom:number = Math.random();
-  let returnString:string;
+  });
+let randomWelcomeCreator = (): string => {
+  const psuedoRandom: number = Math.random();
+  let returnString: string;
   if (psuedoRandom > 0.8) {
     returnString = `Welcome, ${fetchedUsername}.`;
   } else if (psuedoRandom > 0.6 && psuedoRandom < 0.8) {

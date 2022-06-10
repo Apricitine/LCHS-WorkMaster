@@ -1,19 +1,13 @@
 <template>
   <container app-container="true">
     <main contains-main-content="true">
-      <GoogleSignIn />
+      <UserHi />
     </main>
   </container>
 </template>
-
-<script setup lang="ts">
-import UserHi from "./components/UserHi.vue";
-import GoogleSignIn from "./components/GoogleSignIn.vue";
-</script>
-
 <style lang="scss">
 @import "./sass/variables.scss";
-@import "./sass/basic.scss";
+@import "./sass/base.scss";
 
 container[app-container="true"] {
   display: flex;
@@ -32,3 +26,7 @@ main[contains-main-content="true"] {
   padding: 3%;
 }
 </style>
+<script setup lang="ts" defer>
+import UserHi from "./components/UserHi.vue";
+import GoogleSignIn from "./components/GoogleSignIn.vue";
+</script>
