@@ -1,18 +1,23 @@
 <template>
   <GoogleClientSignIn />
   <h1>Sign In With Google</h1>
-  <container isSignInContainer="true">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  </container>
 </template>
 <script lang="ts" defer>
+import firebase from "firebase";
 export default {
   data() {
     return {
 
     };
   },
+  methods: {
+    signInWithGoogle() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider);
+    }
+  }
 }
+
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";
