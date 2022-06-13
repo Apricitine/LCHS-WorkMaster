@@ -1,5 +1,4 @@
 <template>
-  <GoogleClientSignIn />
   <h1>Sign In With Google</h1>
 </template>
 <script lang="ts" defer>

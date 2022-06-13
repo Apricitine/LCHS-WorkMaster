@@ -18,5 +18,4 @@ export default {
 @import "../sass/variables.scss";
 @import "../sass/base.scss";
 
-
 </style>
