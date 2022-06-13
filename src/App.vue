@@ -1,13 +1,15 @@
 <template>
   <container app-container="true">
     <main contains-main-content="true">
-      <GoogleSignIn/>
+      <HomeView/>
     </main>
   </container>
 </template>
+
 <script setup lang="ts" defer>
 import UserHi from "./components/UserHi.vue";
-import GoogleSignIn from "./components/GoogleSignIn.vue";
+import HomeView from "./pages/HomeView.vue";
+import GoogleSignIn from "./pages/GoogleSignIn.vue";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 

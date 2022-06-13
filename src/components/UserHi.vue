@@ -9,25 +9,21 @@ export default {
     };
   }
 }
+const username: string | object = fetch("").then(res => res.json()).then(data => data.username) ?? "[username]";
 
-let fetchedUsername = fetch("https://classroom.googleapis.com/v1/courses", {})
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-});
 let randomWelcomeCreator = (): string => {
   const psuedoRandom: number = Math.random();
   let returnString: string;
   if (psuedoRandom > 0.8) {
-    returnString = `Welcome, ${fetchedUsername}.`;
+    returnString = `Welcome, ${username}.`;
   } else if (psuedoRandom > 0.6 && psuedoRandom < 0.8) {
-    returnString = `Hey there ${fetchedUsername}!`;
+    returnString = `Hey there ${username}!`;
   } else if (psuedoRandom > 0.4 && psuedoRandom < 0.6) {
-    returnString = `What's up, ${fetchedUsername}?`;
+    returnString = `What's up, ${username}?`;
   } else if (psuedoRandom > 0.2 && psuedoRandom < 0.4) {
-    returnString = `Nice to see you, ${fetchedUsername}.`;
+    returnString = `Nice to see you, ${username}.`;
   } else {
-    returnString = `Hi ${fetchedUsername}.`;
+    returnString = `Hi ${username}.`;
   }
   return returnString;
 };
