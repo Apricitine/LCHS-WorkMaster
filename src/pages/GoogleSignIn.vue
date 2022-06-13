@@ -2,7 +2,7 @@
   <h1>Sign In With Google</h1>
 </template>
 <script lang="ts" defer>
-import firebase from "firebase";
+// import firebase from "firebase";
 export default {
   data() {
     return {
@@ -10,10 +10,10 @@ export default {
     };
   },
   methods: {
-    signInWithGoogle() {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider);
-    }
+    // signInWithGoogle() {
+    //   const provider = new firebase.auth.GoogleAuthProvider();
+    //   firebase.auth().signInWithPopup(provider);
+    // }
   }
 }
 </script>
