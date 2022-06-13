@@ -1,9 +1,19 @@
 <template>
+  <GoogleClientSignIn />
   <h1>Sign In With Google</h1>
   <container isSignInContainer="true">
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
   </container>
 </template>
+<script lang="ts" defer>
+export default {
+  data() {
+    return {
+
+    };
+  },
+}
+</script>
 <style lang="scss">
 @import "../sass/variables.scss";
 @import "../sass/base.scss";
@@ -26,12 +36,3 @@ h1 {
   text-align: center;
 }
 </style>
-<script lang="ts" defer>
-export default {
-  data() {
-    return {
-
-    };
-  },
-}
-</script>

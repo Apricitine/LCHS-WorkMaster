@@ -1,10 +1,14 @@
 <template>
   <container app-container="true">
     <main contains-main-content="true">
-      <UserHi />
+      <UserHi/>
     </main>
   </container>
 </template>
+<script setup lang="ts" defer>
+import UserHi from "./components/UserHi.vue";
+import GoogleSignIn from "./components/GoogleSignIn.vue";
+</script>
 <style lang="scss">
 @import "./sass/variables.scss";
 @import "./sass/base.scss";
@@ -24,9 +28,7 @@ main[contains-main-content="true"] {
   height: $main-content-sizing;
   border-radius: 12px;
   padding: 3%;
+  border: 1px solid $main-content-border-color;
 }
 </style>
-<script setup lang="ts" defer>
-import UserHi from "./components/UserHi.vue";
-import GoogleSignIn from "./components/GoogleSignIn.vue";
-</script>
+

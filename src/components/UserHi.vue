@@ -1,22 +1,6 @@
 <template>
   <h1 user-hello="true">{{ `${WelcomeMessage}` }}</h1>
 </template>
-<style lang="scss">
-@import "../sass/variables.scss";
-@import "../sass/base.scss";
-@import "../sass/mixins.scss";
-
-h1[user-hello="true"] {
-  @include animation-slide-from-top(
-    1s, 
-    $welcome-animation-margin-delta, 
-    $welcome-animation-final-color, 
-    $welcome-initial-font-size,
-    $welcome-final-font-size
-  );
-}
-</style>
-
 <script lang="ts" defer>
 export default {
   data() {
@@ -30,7 +14,7 @@ let fetchedUsername = fetch("https://classroom.googleapis.com/v1/courses", {})
   .then(response => response.json())
   .then(data => {
     console.log(data);
-  });
+});
 let randomWelcomeCreator = (): string => {
   const psuedoRandom: number = Math.random();
   let returnString: string;
@@ -48,5 +32,21 @@ let randomWelcomeCreator = (): string => {
   return returnString;
 };
 const randomWelcome = randomWelcomeCreator();
-
 </script>
+<style lang="scss">
+@import "../sass/variables.scss";
+@import "../sass/base.scss";
+@import "../sass/mixins.scss";
+
+h1[user-hello="true"] {
+  @include animation-slide-from-top(
+    1s, 
+    $welcome-animation-margin-delta, 
+    $welcome-animation-final-color, 
+    $welcome-initial-font-size,
+    $welcome-final-font-size
+  );
+}
+</style>
+
+
