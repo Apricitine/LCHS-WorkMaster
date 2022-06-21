@@ -19,5 +19,8 @@ const analytics = getAnalytics(GoogleContextApp);
 
 
 const WorkMasterApp = createApp(App);
-WorkMasterApp.mount('#app');
 WorkMasterApp.use(router);
+WorkMasterApp.mount('#app');
+
+
+
