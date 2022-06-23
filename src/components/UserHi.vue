@@ -42,6 +42,10 @@ h1[user-hello="true"] {
     $welcome-initial-font-size,
     $welcome-final-font-size
   );
+
+  border-radius: 12px;
+  background-color: $accent-color-1;
+  padding: 2%;
 }
 </style>
 

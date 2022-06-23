@@ -15,4 +15,9 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "../sass/variables.scss";
+@import "../sass/base.scss";
+@import "../sass/mixins.scss";
+
+
 </style>

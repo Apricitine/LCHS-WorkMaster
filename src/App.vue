@@ -28,6 +28,7 @@ import GoogleSignIn from "./pages/GoogleSignIn.vue";
 <style lang="scss">
 @import "./sass/variables.scss";
 @import "./sass/base.scss";
+@import "./sass/mixins.scss";
 
 container[app-container="true"] {
   display: flex;
@@ -56,11 +57,20 @@ nav[top-navigation-bar="true"] {
 button {
   background: hsla(0, 0%, 0%, 0);
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  transition: border-radius 0.2s ease-in-out, background 0.3s ease-in-out;
+  padding: 2%;
+  margin: 1%;
 
   a {
     text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    background: $accent-color-1;
+    border-radius: 2px;
   }
 }
 
