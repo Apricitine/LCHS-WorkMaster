@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, ref, TransitionGroup } from 'vue';
 import App from './App.vue';
 import router from './route/index';
 import { initializeApp } from "firebase/app";
@@ -16,10 +16,15 @@ const firebaseConfig = {
 
 const GoogleContextApp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(GoogleContextApp);
-
-
 const WorkMasterApp = createApp(App);
-WorkMasterApp.use(router);
+class WorkingInitialContextApp_0 extends null {
+
+}
+
+WorkMasterApp.use(ref)?.use(router);
+WorkMasterApp.config.compilerOptions.isCustomElement = (t: string) => {
+  return <boolean>t.startsWith("container");
+}
 WorkMasterApp.mount('#app');
 
 

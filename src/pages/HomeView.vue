@@ -1,18 +1,11 @@
 <template>
   <UserHi/>
 </template>
-<script lang="ts">
+<script lang="ts" setup defer>
 import UserHi from "../components/UserHi.vue";
-export default {
-  data() {
-    return {
-    
-    }
-  },
-  components: {
-    UserHi
-  }
-}
+import * as v from "vue";
+
+
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";

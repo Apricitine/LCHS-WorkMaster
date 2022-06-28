@@ -1,21 +1,8 @@
 <template>
   <h1>Sign In With Google</h1>
 </template>
-<script lang="ts" defer>
-// import firebase from "firebase";
-export default {
-  data() {
-    return {
-
-    };
-  },
-  methods: {
-    // signInWithGoogle() {
-    //   const provider = new firebase.auth.GoogleAuthProvider();
-    //   firebase.auth().signInWithPopup(provider);
-    // }
-  }
-}
+<script lang="ts" setup defer>
+import * as v from "vue";
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";

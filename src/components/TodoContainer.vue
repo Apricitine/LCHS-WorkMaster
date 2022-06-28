@@ -1,14 +1,10 @@
 <template>
 
 </template>
-<script lang="ts">
-export default {
-  data() {
-    return {
+<script lang="ts" setup defer>
+import * as v from "vue";
 
-    };
-  }
-}
+
 </script>
 <style lang="scss">
 @import "";

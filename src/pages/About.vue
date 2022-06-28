@@ -9,10 +9,8 @@
     ipsa esse voluptatem cupiditate odit neque ut.
   </main>
 </template>
-<script lang="ts">
-export default {
-
-};
+<script lang="ts" setup defer>
+import * as v from "vue";
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";

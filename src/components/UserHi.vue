@@ -1,17 +1,11 @@
 <template>
-  <h1 user-hello="true">{{ `${WelcomeMessage}` }}</h1>
+  <h1 user-hello="true">{{ welcomeMessage }}</h1>
 </template>
-<script lang="ts" defer>
-export default {
-  data() {
-    return {
-      WelcomeMessage: randomWelcome
-    };
-  }
-}
-const username: string | object = fetch("").then(res => res.json()).then(data => data.username) ?? "[username]";
+<script lang="ts" setup defer>
+import * as v from "vue";
 
-let randomWelcomeCreator = (): string => {
+const username: string | object = fetch("").then(res => res.json()).then(data => data.username) ?? "[username]";
+function randomWelcomeCreator(): string {
   const psuedoRandom: number = Math.random();
   let returnString: string;
   if (psuedoRandom > 0.8) {
@@ -26,8 +20,8 @@ let randomWelcomeCreator = (): string => {
     returnString = `Hi ${username}.`;
   }
   return returnString;
-};
-const randomWelcome = randomWelcomeCreator();
+}
+let welcomeMessage = v.ref(randomWelcomeCreator());
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";
@@ -35,13 +29,11 @@ const randomWelcome = randomWelcomeCreator();
 @import "../sass/mixins.scss";
 
 h1[user-hello="true"] {
-  @include animation-slide-from-top(
-    1s, 
-    $welcome-animation-margin-delta, 
-    $welcome-animation-final-color, 
+  @include animation-slide-from-top(1s,
+    $welcome-animation-margin-delta,
+    $welcome-animation-final-color,
     $welcome-initial-font-size,
-    $welcome-final-font-size
-  );
+    $welcome-final-font-size );
 
   border-radius: 12px;
   background-color: $accent-color-1;

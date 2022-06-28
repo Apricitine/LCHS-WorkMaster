@@ -21,9 +21,10 @@
   </container>
 </template>
 
-<script setup lang="ts" defer>
+<script lang="ts" setup defer>
 import HomeView from "./pages/HomeView.vue";
-import GoogleSignIn from "./pages/GoogleSignIn.vue";
+import * as v from "vue";
+
 </script>
 <style lang="scss">
 @import "./sass/variables.scss";
