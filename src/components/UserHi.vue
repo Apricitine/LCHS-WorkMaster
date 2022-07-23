@@ -38,6 +38,7 @@ h1[user-hello="true"] {
   border-radius: 12px;
   background-color: $accent-color-1;
   padding: 2%;
+
 }
 </style>
 
