@@ -63,6 +63,7 @@ button {
   padding: 2%;
   margin: 1%;
 
+  // wow, useful fix!
   &:has(a.router-link-active) {
     background: $accent-color-1;
     border-radius: 2px;
