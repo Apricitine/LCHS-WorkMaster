@@ -24,7 +24,6 @@
 <script lang="ts" setup defer>
 import HomeView from "./pages/HomeView.vue";
 import * as v from "vue";
-
 </script>
 <style lang="scss">
 @import "./sass/variables.scss";
@@ -64,6 +63,11 @@ button {
   padding: 2%;
   margin: 1%;
 
+  &:has(a.router-link-active) {
+    background: $accent-color-1;
+    border-radius: 2px;
+  }
+
   a {
     text-decoration: none;
     text-transform: capitalize;
@@ -85,4 +89,3 @@ button {
   transition: opacity 0.25s ease-out;
 }
 </style>
-
