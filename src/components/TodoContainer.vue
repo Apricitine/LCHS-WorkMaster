@@ -1,11 +1,15 @@
 <template>
   <main main-container>
-    <ToDoSingle />
+    <ToDoSingle v-for="todo in todos"/>
   </main>
 </template>
 <script lang="ts" setup defer>
 import * as v from "vue";
-import ToDoSingle from "@/assets/ToDoSingle.vue";
+import ToDoSingle from "@/components/ToDoSingle.vue";
+
+const todos = v.ref({
+  aTodo: "do stuff"
+});
 
 </script>
 <style lang="scss">

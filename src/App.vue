@@ -12,7 +12,7 @@
           <router-link to="/settings">Settings</router-link>
         </button>
       </nav>
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component }" :key="$route.fullPath">
         <transition name="fadeTransition" mode="out-in">
           <component :is="Component" />
         </transition>

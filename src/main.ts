@@ -1,31 +1,14 @@
 import { createApp, ref, TransitionGroup } from 'vue';
-import App from './App.vue';
+import App from '@/App.vue';
 import router from './route/index';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { createPinia } from 'pinia';
+import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAUoopz44L_t9ugGvg3cUo7uEVg0zwcTx4",
-  authDomain: "lchs-workmaster.firebaseapp.com",
-  projectId: "lchs-workmaster",
-  storageBucket: "lchs-workmaster.appspot.com",
-  messagingSenderId: "746712589995",
-  appId: "1:746712589995:web:131506c2bbfbe59b9c39ee",
-  measurementId: "G-QCK7E23BGH"
-};
-
-const GoogleContextApp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(GoogleContextApp);
+const pinia = createPinia();
 const WorkMasterApp = createApp(App);
-class WorkingInitialContextApp_0 extends null {
 
-}
-
-WorkMasterApp.use(ref)?.use(router);
+WorkMasterApp.use(router).use(pinia).use(autoAnimatePlugin);
 WorkMasterApp.config.compilerOptions.isCustomElement = (t: string) => {
   return <boolean>t.startsWith("container");
 }
 WorkMasterApp.mount('#app');
-
-
-
