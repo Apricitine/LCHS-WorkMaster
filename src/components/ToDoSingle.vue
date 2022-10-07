@@ -27,8 +27,4 @@ input {
   background: transparent;
   border: none;
 }
-
-[section-wrapper] {
-  background-color: rgb(98, 219, 98);
-}
 </style>
