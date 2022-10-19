@@ -7,9 +7,10 @@
 import * as v from "vue";
 import ToDoSingle from "@/components/ToDoSingle.vue";
 
-const todos = v.ref({
-  aTodo: "do stuff"
-});
+const todos = v.ref([
+  "do stuff"
+]);
+
 
 </script>
 <style lang="scss">

@@ -6,16 +6,16 @@
     <section>
       <input type="text" v-model="longDesc">
     </section>
-    <section>
-    </section>
   </main>
 </template>
 <script lang="ts" setup defer>
 import * as v from "vue";
 
-let title:object = v.ref("");
-let longDesc:any = v.ref("");
-
+const props = v.defineProps({
+ title: {
+    default: "Nothing"
+  }
+});
 
 </script>
 <style lang="scss">
@@ -26,5 +26,11 @@ let longDesc:any = v.ref("");
 input {
   background: transparent;
   border: none;
+}
+
+[section-wrapper] {
+  background-color: hsl(279, 63%, 62%);
+  border-radius: 12px;
+  padding: 2.5%;
 }
 </style>
