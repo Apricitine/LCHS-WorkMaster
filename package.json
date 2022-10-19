@@ -1,0 +1,29 @@
+{
+  "name": "workmaster",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "dep": "yarn && yarn build && firebase deploy",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --port 5050",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.3",
+    "firebase": "^9.8.3",
+    "pinia": "^2.0.22",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.27",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "@vue/tsconfig": "^0.1.3",
+    "@vueuse/core": "^9.3.0",
+    "sass": "^1.52.3",
+    "typescript": "~4.6.3",
+    "vite": "^2.9.5",
+    "vue-tsc": "^0.34.7"
+  }
+}
