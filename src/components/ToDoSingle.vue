@@ -11,11 +11,8 @@
 <script lang="ts" setup defer>
 import * as v from "vue";
 
-const props = v.defineProps({
- title: {
-    default: "Nothing"
-  }
-});
+let title: string;
+let longDesc: string;
 
 </script>
 <style lang="scss">

@@ -2,15 +2,9 @@
   <container app-container="true">
     <main contains-main-content="true">
       <nav top-navigation-bar="true">
-        <button nav-button home>
-          <router-link to="/">Home</router-link>
-        </button>
-        <button nav-button about_>
-          <router-link to="/about">About</router-link>
-        </button>
-        <button nav-button setting>
-          <router-link to="/settings">Settings</router-link>
-        </button>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/settings">Settings</router-link>
       </nav>
       <router-view v-slot="{ Component }" :key="$route.fullPath">
         <transition name="fadeTransition" mode="out-in">
@@ -23,7 +17,6 @@
 
 <script lang="ts" setup defer>
 import HomeView from "./pages/HomeView.vue";
-import * as v from "vue";
 </script>
 <style lang="scss">
 @import "./sass/variables.scss";
@@ -52,9 +45,10 @@ nav[top-navigation-bar="true"] {
   display: flex;
   justify-content: space-around;
   margin: 6%;
+  user-select: none;
 }
 
-button {
+a {
   background: hsla(0, 0%, 0%, 0);
   border: none;
   font-size: 1.4rem;
@@ -62,16 +56,13 @@ button {
   transition: border-radius 0.2s ease-in-out, background 0.3s ease-in-out;
   padding: 2%;
   margin: 1%;
+  text-decoration: none;
 
   // wow, useful fix!
+  // thanks :has selector
   &:has(a.router-link-active) {
     background: $accent-color-1;
     border-radius: 2px;
-  }
-
-  a {
-    text-decoration: none;
-    text-transform: capitalize;
   }
 
   &:hover {

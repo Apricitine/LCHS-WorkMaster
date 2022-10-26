@@ -5,9 +5,6 @@
 <script lang="ts" setup defer>
 import UserHi from "../components/UserHi.vue";
 import TodoContainer from "@/components/TodoContainer.vue";
-import * as v from "vue";
-
-
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";

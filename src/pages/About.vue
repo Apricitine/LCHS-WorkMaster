@@ -11,8 +11,6 @@
   </main>
 </template>
 <script lang="ts" setup defer>
-import * as v from "vue";
-
 interface CreditIndice extends Object {
   title: string;
   description?: string;
