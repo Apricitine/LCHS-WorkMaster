@@ -1,6 +1,7 @@
 {
   "name": "workmaster",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "dep": "yarn && yarn build && firebase deploy",

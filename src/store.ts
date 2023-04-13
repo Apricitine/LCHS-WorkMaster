@@ -1,8 +1,5 @@
 import { defineStore } from "pinia";
 
-const useStore = defineStore("main", () => {
-  const username = "me";
-  return { username };
-});
+const useStore = defineStore("main", () => {});
 
 export default useStore;

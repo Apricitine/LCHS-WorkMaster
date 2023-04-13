@@ -2,15 +2,12 @@
   <h1 user-hello="true">{{ welcomeMessage }}</h1>
 </template>
 <script lang="ts" setup defer>
-import * as v from "vue";
 import useStore from "@/store";
-import * as vuse from "@vueuse/core";
 import { storeToRefs } from "pinia";
+import { ref } from "vue";
 
 let UserHiStore = storeToRefs(useStore());
-let username = UserHiStore.username;
-
-console.log(username);
+let username = "Gairemie";
 
 function randomWelcomeCreator(): string {
   const psuedoRandom: number = Math.random();
@@ -28,7 +25,7 @@ function randomWelcomeCreator(): string {
   }
   return returnString;
 }
-let welcomeMessage = v.ref(randomWelcomeCreator());
+let welcomeMessage = ref(randomWelcomeCreator());
 </script>
 <style lang="scss">
 @import "../sass/variables.scss";

@@ -9,9 +9,7 @@
   </main>
 </template>
 <script lang="ts" setup defer>
-import * as v from "vue";
-
-let title: string;
+let title: string = "hello";
 let longDesc: string;
 
 </script>
@@ -23,6 +21,10 @@ let longDesc: string;
 input {
   background: transparent;
   border: none;
+
+  &:focus-visible {
+    border: none;
+  }
 }
 
 [section-wrapper] {

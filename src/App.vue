@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup defer>
-import HomeView from "./pages/HomeView.vue";
+import { vAutoAnimate } from "@formkit/auto-animate";
 </script>
 <style lang="scss">
 @import "./sass/variables.scss";
