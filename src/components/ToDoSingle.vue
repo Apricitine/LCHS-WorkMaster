@@ -1,18 +1,18 @@
 <template>
   <main section-wrapper>
     <section main-todo-input>
-      <input type="text" v-model="title" title-input>
+      <input type="text" title-input v-if="true">
     </section>
     <section>
-      <input type="text" v-model="longDesc">
+      <input type="text">
     </section>
   </main>
 </template>
+
 <script lang="ts" setup defer>
-let title: string = "hello";
-let longDesc: string;
 
 </script>
+
 <style lang="scss">
 @import "../sass/variables.scss";
 @import "../sass/base.scss";
@@ -28,7 +28,7 @@ input {
 }
 
 [section-wrapper] {
-  background-color: hsl(279, 63%, 62%);
+  background-color: hsla(279, 99%, 37%, 0);
   border-radius: 12px;
   padding: 2.5%;
 }

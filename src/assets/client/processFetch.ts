@@ -1,13 +1,12 @@
-import type { TodoEntry } from '../types/types'
+import type { TodoEntryProcessed, TodoEntryGCResponse } from '../types/types'
 
-export default function initialProcessFetch(): TodoEntry {
-  
-
+export default function initialGCProcessFetch(entry: TodoEntryGCResponse): TodoEntryProcessed {
   return {
-    name: "default",
-    longDesc: "default",
-    dueDate: { minute: 0, hour: 12, day: "1 - 1 - 2000" },
+    name: entry.title,
+    longDesc: entry.description,
+    dueDate: `${entry.dueDate} at ${entry.dueTime}`,
     hide: false,
-    completed: false
+    completed: false,
+    isGCAssignment: true
   }
 }

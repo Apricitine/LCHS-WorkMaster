@@ -2,12 +2,10 @@
   <h1 user-hello="true">{{ welcomeMessage }}</h1>
 </template>
 <script lang="ts" setup defer>
-import useStore from "@/store";
-import { storeToRefs } from "pinia";
 import { ref } from "vue";
 
-let UserHiStore = storeToRefs(useStore());
-let username = "Gairemie";
+localStorage.name = "Luke";
+let username = localStorage.name;
 
 function randomWelcomeCreator(): string {
   const psuedoRandom: number = Math.random();
